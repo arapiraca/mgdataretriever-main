@@ -29,7 +29,8 @@ git clone https://github.com/guilhermeolivsilva/mgdataretriever
 
 Instale as dependências necessárias com
 ```
-pip install requirements.txt
+pip install bs4
+pip install ftfy
 ```
 
 ### Portal da Transparência de MG
@@ -52,7 +53,7 @@ meuObjeto.listarDatasetsPorConjunto('nome-do-conjunto')
 ```
 _Observe que o argumento da função deve ser **idêntico** a um dos resultados retornados no passo 1._
 ```
-transparenciaMg.listarDatasetsPorConjunto('programa-de-financiamento-2009')
+meuObjeto.listarDatasetsPorConjunto('programa-de-financiamento-2009')
 ```
 
 3. Baixe o dataset desejado
@@ -61,12 +62,12 @@ meuObjeto.baixarDataset('nome-do-conjunto', 'nome-do-dataset')
 ```
 _Aqui, também é necessário que o nome do conjunto seja idêntico a um dos resultados do passo 1 e o mesmo para o nome do dataset, em relação a um dos resultados do passo 2._
 ```
-transparenciaMg.baixarDataset('programa-de-financiamento-2009', 'PPP 2008 Aprovados')
+meuObjeto.baixarDataset('programa-de-financiamento-2009', 'PPP 2008 Aprovados')
 ```
 
 4. O arquivo estará disponível no diretório
 ```
-downloads/portal da transparencia/
+<diretório-clonagem-git>/mgdataretriever/downloads/portal da transparencia/
 ```
 
 ### Fundação João Pinheiro: Minas e-Dados
@@ -85,16 +86,16 @@ meuObjeto.listarDatasets()
 
 2. Baixe o dataset desejado
 ```
-meuObjeto.baixarDataset(nome-do-dataset')
+meuObjeto.baixarDataset('nome-do-dataset')
 ```
 _É necessário que o nome do dataset seja idêntico a um dos resultados do passo 1._
 ```
-fjp.baixarDataset('Turismo')
+meuObjeto.baixarDataset('Turismo')
 ```
 
 3. O arquivo estará disponível no diretório
 ```
-downloads/fundacao joao pinheiro/
+<diretório-clonagem-git>/mgdataretriever/downloads/fundacao joao pinheiro/
 ```
 
 #### Roadmap
